@@ -24,5 +24,11 @@
   "bugs": {
     "url": "https://github.com/BryantBello/Soup-A-Stars/issues"
   },
-  "homepage": "https://github.com/BryantBello/Soup-A-Stars#readme"
+  "homepage": "https://github.com/BryantBello/Soup-A-Stars#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mysql": "^2.10.2",
+    "sequelize": "^3.23.1"
+  }
 }
