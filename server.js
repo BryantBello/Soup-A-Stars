@@ -2,6 +2,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var Sequelize = require('sequelize');
+var passport = require('passport');
+var strategy = require('./setup-passport');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 
 var app = express();
@@ -21,7 +25,7 @@ app.use(express.static(staticContentFolder));
 
 // GET method route
 app.get('/home', function (req, res) {
-  res.sendFile(path.join(staticContentFolder + '/public/home.html'));
+  res.sendFile(path.join(staticContentFolder + '/public/index.html'));
 });
 
 // GET method route

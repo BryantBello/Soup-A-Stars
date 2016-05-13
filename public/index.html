@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/landing-page.css">
     <!-- RESET CSS -->
     <link rel="stylesheet" href="css/reset.css">
+
 </head>
 
 <body>
@@ -70,6 +71,9 @@
             </div>
         </div>
     </div>
+    <div>
+    <button onclick="window.signin();">Login</button>
+    </div>
     <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Bootstrap core JavaScript -->
@@ -78,6 +82,24 @@
     <script type="text/javascript" src="http://mdbootstrap.com/mdbcdn/mdb.min.js"></script>
     <!-- BACKGROUND CHANGER -->
     <script src="javascript/main-page-background.js"></script>
+    <!-- OAUTH SCRIPT -->
+    <script src="https://cdn.auth0.com/js/lock-9.1.min.js"></script>
+
+    <script type="text/javascript">
+  
+  var lock = new Auth0Lock('rIZ3xtbY00Y3XcGTAyykN7eROiNPlWEN', 'bryantbello.auth0.com');
+  
+  
+  function signin() {
+    lock.show({
+        callbackURL: ''
+      , responseType: 'code'
+      , authParams: {
+        scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes 
+      }
+    });
+  }
+</script>
 </body>
 
 </html>
