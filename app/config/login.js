@@ -1,8 +1,8 @@
 function login (email, password, callback) {
   var connection = mysql({
     host     : 'localhost',
-    user     : 'me',
-    password : 'secret',
+    user     : 'root',
+    password : 'stalker',
     database : 'mydb'
   });
 

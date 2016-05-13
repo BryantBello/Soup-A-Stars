@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="css/landing-page.css">
     <!-- RESET CSS -->
     <link rel="stylesheet" href="css/reset.css">
-
 </head>
 
 <body>
@@ -67,13 +66,12 @@
                 <a href=""><i class="ion-social-twitter"></i></a>
             </div>
             <div class="col-md-6 col-md-offset-3">
-                <button class="btn btn-danger btn-lg animated infinite pulse">Get started</button>
+                <button class="btn btn-danger btn-lg animated infinite pulse" onclick="window.signin();">Get started
+                </button>
             </div>
         </div>
     </div>
-    <div>
-    <button onclick="window.signin();">Login</button>
-    </div>
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Bootstrap core JavaScript -->
@@ -84,22 +82,20 @@
     <script src="javascript/main-page-background.js"></script>
     <!-- OAUTH SCRIPT -->
     <script src="https://cdn.auth0.com/js/lock-9.1.min.js"></script>
-
     <script type="text/javascript">
-  
-  var lock = new Auth0Lock('rIZ3xtbY00Y3XcGTAyykN7eROiNPlWEN', 'bryantbello.auth0.com');
-  
-  
-  function signin() {
-    lock.show({
-        callbackURL: ''
-      , responseType: 'code'
-      , authParams: {
-        scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes 
-      }
-    });
-  }
-</script>
+    var lock = new Auth0Lock('rIZ3xtbY00Y3XcGTAyykN7eROiNPlWEN', 'bryantbello.auth0.com');
+
+
+    function signin() {
+        lock.show({
+            callbackURL: '/public/index.html',
+            responseType: 'code',
+            authParams: {
+                scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes 
+            }
+        });
+    }
+    </script>
 </body>
 
 </html>
