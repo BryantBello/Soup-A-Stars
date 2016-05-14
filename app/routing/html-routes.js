@@ -12,7 +12,11 @@ var path = require('path');
 module.exports = function(app) {
     // if asked will send survey page
     app.get('/survey', function(req, res) {
-        res.sendFile(path.join(__dirname + '/../public/survey.html'));
+        res.sendFile(path.join(__dirname + '/../public/restaurant.html'));
+    });
+
+    app.get('/main', function(req, res)	{
+    	res.sendFile(path.join(__dirname + '/../public/main-page.html'));
     });
 
     // if other send index page
