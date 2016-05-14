@@ -1,4 +1,17 @@
+body{
+	background-image: url("../images/background/dark.jpg");
+}
+
+
+
 .jumbotron {
-    background-color: red;
-    font-color: gray;
+    background-image: url("../images/background/dark.jpg");
+}
+
+.jumbotron h1 {
+    color: red;
+}
+
+.row{
+	color:red;
 }
