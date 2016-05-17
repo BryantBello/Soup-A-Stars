@@ -24,4 +24,13 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname + '/../public/index.html'));
     });
 
+<<<<<<< HEAD
 };
+=======
+}
+
+
+
+
+//Will update this when all of the html files are complete
+>>>>>>> 49b29294c376d3003f2b6946276f866f8020aab4
