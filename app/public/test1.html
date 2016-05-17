@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<!-- http://www.yelp.com/search?find_loc=New+Brunswick,+NJ&cflt=restaurants -->
+<head>
+	<meta charset="UTF-8">
+	<title>testing</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="data/njCities.js"></script>
+</head>
+<body>
+<div id="latitudeAndLongitude"></div>
+<div id="address"></div>
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var latitudeAndLongitude=$("#latitudeAndLongitude"),
+	location={
+    	latitude:'',
+    	longitude:''
+	};
+​
+if (navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+else{
+  latitudeAndLongitude.innerHTML="Geolocation is not supported by this browser.";
+}
+	});
+	function showPosition(position){ 
+    location.latitude=position.coords.latitude;
+    location.longitude=position.coords.longitude;
+    latitudeAndLongitude.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+    var geocoder = new google.maps.Geocoder();
+    var latLng = new google.maps.LatLng(location.latitude, location.longitude);
+​
+ if (geocoder) {
+    geocoder.geocode({ 'latLng': latLng}, function (results, status) {
+       if (status == google.maps.GeocoderStatus.OK) {
+         console.log(results[0].formatted_address); 
+         $('#address').html('Address:'+results[0].formatted_address);
+       }
+       else {
+        $('#address').html('Geocoding failed: '+status);
+        console.log("Geocoding failed: " + status);
+       }
+    }); //geocoder.geocode()
+  }      
+} //showPosition
+​
+	
+</script>
