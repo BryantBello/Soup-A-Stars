@@ -10,23 +10,27 @@ var path = require('path');
 // Routes
 // =============================================================
 module.exports = function(app) {
-
-    // Each of the below routes just handles the HTML page that the user gets sent to.
-    app.get('/', function(req, res) {
-        res.sendFile(path.join(__dirname + '/../public/view.html'));
+    // if asked will send survey page
+    app.get('/survey', function(req, res) {
+        res.sendFile(path.join(__dirname + '/../public/restaurant.html'));
     });
 
-    app.get('/add', function(req, res) {
-        res.sendFile(path.join(__dirname + '/../public/add.html'));
+    app.get('/main', function(req, res)	{
+    	res.sendFile(path.join(__dirname + '/../public/main-page.html'));
     });
 
-    app.get('/all', function(req, res) {
-        res.sendFile(path.join(__dirname + '/../public/all.html'));
+    // if other send index page
+    app.use(function(req, res) {
+        res.sendFile(path.join(__dirname + '/../public/index.html'));
     });
 
+<<<<<<< HEAD
+};
+=======
 }
 
 
 
 
 //Will update this when all of the html files are complete
+>>>>>>> 49b29294c376d3003f2b6946276f866f8020aab4
