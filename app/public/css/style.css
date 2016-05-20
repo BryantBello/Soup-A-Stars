@@ -32,6 +32,7 @@ option{
 }
 
 .checkbox-inline{
+	font-family: sans-serif;
 	font-weight: bold;
 	font-size: 24px;
 }
