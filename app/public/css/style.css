@@ -30,3 +30,8 @@ option{
 	background-color:black;
 	color:red;
 }
+
+.checkbox-inline{
+	font-weight: bold;
+	font-size: 24px;
+}

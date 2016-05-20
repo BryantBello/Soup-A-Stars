@@ -87,18 +87,14 @@
 
     function signin() {
         lock.show({
-            callbackURL: '/public/index.html',
+            callbackURL: '/app/public/index.html',
             responseType: 'code',
             authParams: {
                 scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes 
             }
         });
     }
-    function errorResponse(a,b,c){
-        console.log(a);
-        console.log(b);
-        console.log(c);
-    }
+
     </script>
 </body>
 

@@ -20,28 +20,121 @@
                 Find the perfect place to eat tonight!!!
             </h1>
     </div>
-    <div class="row" id="color1">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h2>
-                <strong>ABOUT YOU:</strong>
-            </h2>
-            <h3>NAME (REQUIRED)</h3>
-            <input type="text" id="userName" class="form-control" required>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Restaurants
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Pizza
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Italian
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Delis
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Sushi Bars
+                </label>
+            </div>
         </div>
     </div>
-    <div class="row" id="color1">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3></h3>
-            <input type="text" id="userImage" class="form-control" required>
-            <br>
-            <br>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Sandwiches
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> American (Traditional)
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Nightlife
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Burgers
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> American (New)
+                </label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Bars
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Breakfast & Brunch
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Chinese
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Fast Food
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Cafes
+                </label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Caterers
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Mexicans
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Bagels
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Diners
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Pubs
+                </label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Seafood
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Japanese
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Asian Fusion
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Thai
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Salad
+                </label>
+            </div>
         </div>
     </div>
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
+            <br>
+            <br>
             <h3>1. You would rather goto Starbucks than Dunkin Donuts.</h3>
             <br>
             <select id="quest1">
@@ -271,7 +364,7 @@ $('#submitButton').on('click', function() {
         //console.log("User " + userData.name);
     var currentURL = window.location.origin;
     //AJAX POST REQUEST
-    $.post(currentURL + "/api/friends", userData, function(data) {});
+    $.post(currentURL + "/api/location", userData, function(data) {});
 
 
     //CLEAR FORM

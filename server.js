@@ -20,7 +20,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 app.use(cookieParser());
-app.use(session({ secret: 'rIZ3xtbY00Y3XcGTAyykN7eROiNPlWEN', resave: false, saveUninitialized: false }));
+app.use(session({ secret: 'esvFrsBW3b3HAlh9ruKUVnhfDY3BVsIsE-vY5nZXwRo1wA_FlWv3H1Wvv_DBdGxf', resave: false, saveUninitialized: false }));
 app.use(passport.initialize());
 app.use(passport.session());
 
