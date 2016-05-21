@@ -13,7 +13,7 @@ var source = {
         host: 'localhost',
         user: 'root',
         password: "Njmitx123",
-        database: "starwars"
+        database: "experiod"
     },
 
     jawsDB: {
