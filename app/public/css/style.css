@@ -2,6 +2,18 @@ body{
 	background-image: url("../images/background/dark.jpg");
 }
 
+#select {
+	color:red;
+	font-weight: bold;
+	font-size:44px;
+	text-align: center;
+
+}
+#information{
+	font-weight: bold;
+	font-size: 32px;
+}
+
 
 
 .jumbotron {
@@ -29,4 +41,10 @@ body{
 option{
 	background-color:black;
 	color:red;
+}
+
+.checkbox-inline{
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 24px;
 }

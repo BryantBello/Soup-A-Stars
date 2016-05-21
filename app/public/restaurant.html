@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Soup-A-Stars</title>
+    <meta name="keywords" content="RCB CODING NODE.JS NODE JAVASCRIPT HTML auth0 EXPRESS MEAN MySQL  REACT METEOR NoSQL SOCIAL YELP
+          DISCUSSION PROJECT HELP COLLABORATION GROUP CODE NEWJERSEY NEW JERSEY JQUERY HTML CSS BOOTSTRAP
+          LINUX WINDOWS MAC IOS ANDROID FULLSTACK FULL STACK DEV DEVELOPMENT JRDEV JR ">
+    <meta name="description" content="Survey based application to help a user find the perfect restaurant or bar to goto at anytime of the day or night. Whether the user wants a late night snack or a romantic dinner, we will place that person to the perfect location!!!!">
+    <title>Soup-A-Stars, Restaurant App to find the perfect place to go tonight! - Node.JS, JavaScript, Full Stack Dev</title>
     <!-- BOOTSTRAP AND JQUERY -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
@@ -20,29 +25,130 @@
                 Find the perfect place to eat tonight!!!
             </h1>
     </div>
-    <div class="row" id="color1">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h2>
-                <strong>ABOUT YOU:</strong>
-            </h2>
-            <h3>NAME (REQUIRED)</h3>
-            <input type="text" id="userName" class="form-control" required>
+    <div>
+        <h2 id="select">Please select which type of food, drink or type of place you are interested in. (Select as many of choice that fancy your stomach!)
+    </h2>
+        <br>
+        <br>
+    </div>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Restaurants
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Pizza
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Italian
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Delis
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Sushi Bars
+                </label>
+            </div>
         </div>
     </div>
-    <div class="row" id="color1">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3></h3>
-            <input type="text" id="userImage" class="form-control" required>
-            <br>
-            <br>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Sandwiches
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> American (Traditional)
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Nightlife
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Burgers
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> American (New)
+                </label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Bars
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Breakfast & Brunch
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Chinese
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Fast Food
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Cafes
+                </label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Caterers
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Mexicans
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Bagels
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Diners
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Pubs
+                </label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row" id="color1">
+            <div class="col-md-2"></div>
+            <div class="col-md-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Seafood
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Japanese
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Asian Fusion
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Thai
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> Salad
+                </label>
+            </div>
         </div>
     </div>
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>1. You would rather goto Starbucks than Dunkin Donuts.</h3>
+            <br>
+            <br>
+            <h2 id="information">Since we can see what you are interested, please fill out a few questions so we can suggest the perfect place for you!</h2>
+            <br>
+            <h3>How important is the ambience to you?</h3>
             <br>
             <select id="quest1">
                 <option value="0" selected="selected">ANSWER</option>
@@ -58,7 +164,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>2. You would rather goto Burger King over McDonalds.</h3>
+            <h3>Are you looking to spend your whole paycheck or just have a quick bite?</h3>
             <br>
             <select id="quest2">
                 <option value="0" selected="selected">ANSWER</option>
@@ -74,7 +180,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>3. When you are at the bar, you pay for the first round.</h3>
+            <h3>How important is parking to you? Unless you are taking a bike or public transportation of course!</h3>
             <br>
             <select id="quest3">
                 <option value="0" selected="selected">ANSWER!!!!!!!</option>
@@ -90,7 +196,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>4. When out with friends, you always take the initiative???</h3>
+            <h3>Are you looking to go out somewhere that can accomidate a group?</h3>
             <br>
             <select id="quest4">
                 <option value="0" selected="selected">ANSWER</option>
@@ -106,7 +212,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>5. When at work, you always take the initiative.</h3>
+            <h3>Is wheelchair accessibilty an neccessity?</h3>
             <br>
             <select id="quest5">
                 <option value="0" selected="selected">ANSWER</option>
@@ -122,7 +228,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>6. You prefer an iPhone over an android.</h3>
+            <h3>Want to a place that is kid friendly or should we call the babysitter?</h3>
             <br>
             <select id="quest6">
                 <option value="0" selected="selected">ANSWER</option>
@@ -138,7 +244,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>7. You prefer Sugar Free redbull over regular redbull. </h3>
+            <h3>Dessert is on the menu!! Care to partake using your sweet toothe? </h3>
             <br>
             <select id="quest7">
                 <option value="0" selected="selected">ANSWER</option>
@@ -154,7 +260,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>8. Whiskey sippin' over taking a shot.</h3>
+            <h3>DANCE DANCE DANCE. Would you like to dance tonight or listen to some live music?</h3>
             <br>
             <select id="quest8">
                 <option value="0" selected="selected">ANSWER</option>
@@ -170,7 +276,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>9. Choosing an urban life over country life.</h3>
+            <h3>How far are you willing to travel for the perfect night?</h3>
             <br>
             <select id="quest9">
                 <option value="0" selected="selected">ANSWER</option>
@@ -186,7 +292,7 @@
     <div class="row" id="color1">
         <div class="col-md-2"></div>
         <div class="col-md-9">
-            <h3>10. You think you will find a new friend using this survey.</h3>
+            <h3>Reservations so you do not have to wait for a table. Unless the place does not take reservations!</h3>
             <br>
             <select id="quest10">
                 <option value="0" selected="selected">ANSWER</option>
@@ -271,9 +377,7 @@ $('#submitButton').on('click', function() {
         //console.log("User " + userData.name);
     var currentURL = window.location.origin;
     //AJAX POST REQUEST
-    $.post(currentURL + "/api/friends", userData, function(data) {});
-
-
+    $.post(currentURL + "/api/location", userData, function(data) {});
     //CLEAR FORM
     userName = $('#userName').val(" ");
     userPhoto = $('#userImage').val(" ");

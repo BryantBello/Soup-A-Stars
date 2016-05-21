@@ -25,10 +25,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-staticContentFolder = __dirname + '/app';
+staticContentFolder = __dirname + '/app/public';
 app.use(express.static(staticContentFolder));
 
 
+<<<<<<< HEAD
 // GET method route
 app.get('/home', function(req, res) {
     res.sendFile(path.join(staticContentFolder + '/public/index.html'));
@@ -38,6 +39,11 @@ app.get('/home', function(req, res) {
 app.get('/restaurant', function(req, res) {
     res.sendFile(path.join(staticContentFolder + '/public/restaurant.html'));
 });
+=======
+// require('./app/routing/api-routes.js')(app); //curently no api routes
+require('./app/routing/html-routes.js')(app);
+
+>>>>>>> 7f7beb073c3fc732a0a7e789d024d352679845bc
 
 // Auth0 callback handler
 app.get('/restaurant',
