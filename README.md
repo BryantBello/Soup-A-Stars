@@ -5,6 +5,15 @@ Survey based application to help a user find the perfect restaurant or bar to go
 To test this application, simply login with your Facebook, Google+ or GitHub account. Or simply just create your own login!
 
 
+Node.js 
+MySQL
+Sequalize
+Bootstrap
+Auth0
+SEO
+jQuery
+
+
 Link to a running application!!
 
 https://vast-castle-14159.herokuapp.com/
@@ -35,5 +44,3 @@ Results
 ![alt tag](https://github.com/BryantBello/Soup-A-Stars/blob/master/Pics/results.PNG)
 
 
-Flow Chart
-![alt tag](https://github.com/BryantBello/Soup-A-Stars/blob/master/FLOW%20CHART.pdf)
