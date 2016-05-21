@@ -15,12 +15,12 @@ var staticContentFolder;
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(cookieParser());
-app.use(session({ secret: 'rIZ3xtbY00Y3XcGTAyykN7eROiNPlWEN', resave: false, saveUninitialized: false }));
+app.use(session({ secret: 'YOUR_SECRET_HERE', resave: false,  saveUninitialized: false }));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -29,39 +29,12 @@ staticContentFolder = __dirname + '/app/public';
 app.use(express.static(staticContentFolder));
 
 
-<<<<<<< HEAD
-// GET method route
-app.get('/home', function(req, res) {
-    res.sendFile(path.join(staticContentFolder + '/public/index.html'));
-});
-
-// GET method route
-app.get('/restaurant', function(req, res) {
-    res.sendFile(path.join(staticContentFolder + '/public/restaurant.html'));
-});
-=======
-// require('./app/routing/api-routes.js')(app); //curently no api routes
+require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
->>>>>>> 7f7beb073c3fc732a0a7e789d024d352679845bc
-
-// Auth0 callback handler
-app.get('/restaurant',
-    passport.authenticate('auth0', { failureRedirect: '/restaurant' }),
-    function(req, res) {
-        if (!req.user) {
-            throw new Error('user null');
-        }
-        res.redirect("/restaurant");
-    });
-
-
-
-
-
-app.listen(PORT, function() {
-    console.log('Serving static content from ' + staticContentFolder)
-    console.log('App listening on PORT: ' + PORT);
+app.listen(PORT,function(){
+	console.log('Serving static content from ' + staticContentFolder)
+	console.log('App listening on PORT: ' + PORT);
 });
 
 
@@ -75,3 +48,6 @@ app.listen(PORT, function() {
     plain: true
   }));
 }); */
+
+
+

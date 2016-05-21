@@ -4,23 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Experiod</title>
+    <meta name="keywords" content="RCB CODING NODE.JS NODE JAVASCRIPT HTML auth0 EXPRESS MEAN MySQL  REACT METEOR NoSQL SOCIAL YELP
+          DISCUSSION PROJECT HELP COLLABORATION GROUP CODE NEWJERSEY NEW JERSEY JQUERY HTML CSS BOOTSTRAP
+          LINUX WINDOWS MAC IOS ANDROID FULLSTACK FULL STACK DEV DEVELOPMENT JRDEV JR ">
+    <meta name="description" content="Survey based application to help a user find the perfect restaurant or bar to goto at anytime of the day or night. Whether the user wants a late night snack or a romantic dinner, we will place that person to the perfect location!!!!">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.2/js/tether.min.js'></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    
     <!-- SOCIAL MEDIA ICONS -->
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- GOOGLE FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700|Oswald' rel='stylesheet' type='text/css'>
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- MDB core CSS -->
-    <link href="http://mdbootstrap.com/mdbcdn/mdb.min.css" rel="stylesheet">
-    <!-- LOCAL CSS -->
-    <link rel="stylesheet" type="text/css" href="css/main-page-handlebars.css">
+    <link href="css/mdb.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- NAV -->
     <nav class="navbar red default">
         <div class="container-fluid">
-            <div class="navbar-header">
+            <div class="navbar-header" style='float: left'>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -35,36 +44,31 @@
                     <li><a href="#" class="waves-effect waves-light">Restaurants</a></li>
                 </ul>
             </div>
+            <div id="userInfo" style="float: right">
+            </div>
         </div>
     </nav>
     <!-- /NAV -->
     <div class="container">
         <div class="row">
+            
             <div class="col-md-12">
-                <ul class="collection z-depth-3">
+
+                <ul id="location" class="collection z-depth-3">
                     <li class="collection-item avatar">
-                        <img src="images/main-page/img.jpg" alt="" class="circle">
-                        <span class="title">Restaurant Name</span>
-                        <p>Description</p>
-                        <br>
-                        <p>last comment</p>
-                        <p class="text-right" id="address">Address</p>
+                        <span><h3 style='float: left; margin-left: 25px'>Getting Location.. </h3></span><span><img class='text-right' src="images/spiffygif_46x46.gif" style='margin-top: 15px; margin-left: 35px'alt="" class="circle"><span></span>
+                        
                     </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <ul id="restaurants" class="collection z-depth-3">
                     <li class="collection-item avatar">
-                        <img src="images/main-page/img.jpg" alt="" class="circle">
-                        <span class="title">Restaurant Name</span>
-                        <p>Description</p>
-                        <br>
-                        <p>last comment</p>
-                        <p class="text-right" id="address">Address</p>
-                    </li>
-                    <li class="collection-item avatar">
-                        <img src="images/main-page/img.jpg" alt="" class="circle">
-                        <span class="title">Restaurant Name</span>
-                        <p>Description</p>
-                        <br>
-                        <p>last comment</p>
-                        <p class="text-right" id="address">Address</p>
+                        <span><h3 style='float: left; margin-left: 25px'>Finding Your Matches.. </h3></span><span><img class='text-right' src="images/spiffygif_46x46.gif" style='margin-top: 15px; margin-left: 35px'alt="" class="circle"><span></span>
+                        
                     </li>
                 </ul>
             </div>
@@ -121,15 +125,6 @@
                 </div>
             </div>
         </div>
-        <div class="call-to-action inline-block">
-            <ul class="list-inline">
-                <li>
-                    <h5 class="white-text">Register for free </h5></li>
-                <li> <a class="btn btn-danger waves-effect waves-light">GET STARTED!</a></li>
-            </ul>
-        </div>
-        <div class="social-section text-center">
-        </div>
         <div class="footer-copyright text-center rgba-black-light">
             <div class="container-fluid">
                 <p>© 2015 Copyright Experiod</p>
@@ -138,11 +133,41 @@
     </footer>
     <!--/.Footer section-->
     <!-- JQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="http://mdbootstrap.com/mdbcdn/mdb.min.js"></script>
+    
+<div id='modals'></div>
 </body>
 
 </html>
+<script type="text/javascript">
+
+
+$.get('/user-info', function(user){
+    $("#location").html("<li><h4 class='title header text-xs-center'>Your matches near "+user.location.address+"</h4></li>");
+    $("#userInfo").html("<span style='font-size:20px; color:white'>"+user.displayName+" <img style='height: 75px'src='"+user.picture+"'></span>")
+    var url = window.location.origin + '/api/restaurants';
+    $.get(url, function(data) {
+        if(data == 404){
+            $("#restaurants").append("No results Found");
+        };
+        $("#restaurants").empty();
+        for(var i=0; i<data.length; i++){
+           var categories = "";
+            if(data[i].categories != undefined){
+                for(var j=0; j<data[i].categories.length; j++){
+                    if(data[i].categories[j] != undefined) categories += data[i].categories[j][0];
+                    if(j != data[i].categories.length -1) categories += ", ";
+                }
+            }
+            
+            $("#restaurants").append("<li class='collection-item avatar'><span style='float:left'><img src='"+data[i].image+"' class='circle'><span style='font-size: 20px' class='title'>"+data[i].name+"</span><p>"+categories+"</p><button type='button' class='' data-toggle='modal' data-target='#myModal"+i+"'>Details</button></span><p class='text-xs-right address'><br>"+data[i].location.display_address[0]+"<br>"+data[i].location.display_address[1]+"</p></li>");
+            $("#modals").append('<div class="modal fade" id="myModal'+i+'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel'+i+'" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">&times;</span></button><h3 class="modal-title" id="myModalLabel'+i+'">'+data[i].name+'</h3></div><div class="modal-body"><div class="row"><div class="col-md-5"><img class="img-responsive" style="height: 200px" src='+data[i].image+'></div><div class="col-md-7">"'+data[i].text+'"</div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div></div></div></div>');
+
+        };
+    });
+    
+})
+
+    
+
+        
+</script>
